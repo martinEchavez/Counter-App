@@ -4,12 +4,12 @@ import PropType from 'prop-types'
 // Hooks que extrae la lógica del contador
 export const useCounter = ( state = 1) => { // Stado inicial por defecto
     const [counter, setCounter] = useState(state)
-
-    const handleAdd = () => {
-        setCounter(counter + 1)
+    // Se agrega el factor para poder incrementar un valor cualquiera
+    const handleAdd = (factor = 1) => {
+        setCounter(counter + factor)
     }
-    const handleSub = () => {
-        setCounter(counter - 1)
+    const handleSub = ( factor = 1) => {
+        setCounter(counter - factor)
     }
     const handleRest = () => {
         setCounter(state)

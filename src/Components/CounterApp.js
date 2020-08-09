@@ -6,9 +6,9 @@ const CounterApp = () => {
     return (
         <>
             <h2>Contador {counter}</h2>
-            <button onClick={handleAdd}>+</button>
+            <button onClick={() => handleAdd(2)}>+</button>
             <button onClick={handleRest}>Reset</button>
-            <button onClick={handleSub}>-</button>
+            <button onClick={() => handleSub(2)}>-</button>
         </>
     )
 }
